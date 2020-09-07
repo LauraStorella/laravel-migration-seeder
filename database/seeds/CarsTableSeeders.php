@@ -17,7 +17,7 @@ class CarsTableSeeders extends Seeder
             $new_car = new Car();
             $new_car->marca = $faker->randomElement(['Fiat', 'Ford', 'Tesla', 'BMW', 'Audi']);
             $new_car->modello = $faker->randomElement(['Punto', 'Fiesta', 'Tesla', 'A3', 'X5']);
-            $new_car->targa = $faker->jpjNumberPlate;
+            $new_car->targa = $faker->randomNumber();
             $new_car->anno = $faker->numberBetween(1990, 2020);
             $new_car->save();
         }
